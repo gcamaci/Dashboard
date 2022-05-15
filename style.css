@@ -69,6 +69,8 @@ header{
     min-height: 50px;
     background-color: red;
     border-radius: 25px;
+    background-image: url("./Svgs/Nala.png");
+    background-position: center ;
 }
 .user h4{
     font-size: 1.5rem;
@@ -100,7 +102,8 @@ input{
 .greeting-pic{
     min-width: 75px;
     height: 75px;
-    
+    background-image: url("./Svgs/Nala.png");
+    background-position: center ;
     border-radius: 40px;
     background-color: red;
 }
@@ -123,7 +126,7 @@ input{
     font-weight: bold;
 }
 .btn:hover{
-    background-color: rgb(16, 194, 238);;
+    background-color: rgb(16, 194, 238);
 }
 aside{
     grid-column: 1;
@@ -147,6 +150,7 @@ aside{
 }
 .logo h1{
     font-size: 2.5rem;
+    color:rgb(16, 194, 238); 
 }
 .top-list{
     display: flex;
@@ -293,6 +297,9 @@ hr{
     gap: 20px;
     padding: 10px;
 }
+.user-trending p{
+    color: #8899A6;
+}
 .user-image{
     width: 50px;
     height: 50px;
@@ -303,11 +310,27 @@ hr{
     color: rgb(16, 194, 238) ;
 }
 .user-img-1{
-    background-image: url("/Svgs/Thor.png");
+    background-image: url("./Svgs/Thor.png");
+    background-repeat: none;
+    background-position: center;
+}
+.user-img-2{
+    background-image: url("./Svgs/loki.png");
+    background-repeat: none;
+    background-position: center;
+}
+.user-img-3{
+    background-image: url("./Svgs/kratos.png");
+    background-repeat: none;
+    background-position: center;
+}
+.user-img-4{
+    background-image: url("./Svgs/odin.png");
     background-repeat: none;
     background-position: center;
 
 }
+
 
 
 
