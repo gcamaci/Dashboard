@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     color: #ffffff;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 body{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 300px 1fr;
     grid-template-rows: 200px;
     min-height: 100vh;
-    box-sizing: border-box;
+    position: relative;
     background-color: #15202B;
 }
 header{
@@ -18,6 +22,13 @@ header{
     grid-column: 2 /3 ;
     grid-row: 1 / 2;
     padding: 0 40px 0 40px;
+    border: #22303c 2px solid;
+    position: sticky;
+    top: 0;
+    background-color: #15202B;
+    z-index: 1;
+    
+  
     
 }
 .top-head{
@@ -41,7 +52,8 @@ header{
     
 }
 .icons{
-    width: 20px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
 }
@@ -62,17 +74,14 @@ header{
 
 input{
     width: 60%;
-    background-color: #22303c;
+    background-color: #192734;
     border: none;
     height: 30px;
+    border: 2px solid #22303c;
+    border-radius: 20px;
 }
 
-main{
-    
-    grid-column: 2 /3;
-    grid-row: 2 / 3;
-    
-}
+
 .bot-head{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -96,27 +105,28 @@ main{
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    
-    
-    
 }
-button{
+.btn{
     width: 150px;
     min-width: 100px;
     height: 50px;
     border-radius: 20px;
     border: none;
-    background-color: rgb(12, 198, 249);
+    background-color: rgb(16, 194, 238);
 }
 aside{
     grid-column: 1;
     grid-row: 1 / 3;
-    position: sticky;
-    border: solid 1px white;
+    border-right: #22303c 1px solid;
     padding: 20px;
     padding-top: 0px;
     display: grid;
-    grid-template-rows:100px 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows:200px 1fr 1fr;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    
 }
 .logo{
     display: grid;
@@ -124,11 +134,15 @@ aside{
     align-items: center;
     gap: 15px;
 }
-
+.logo h1{
+    font-size: 2.5rem;
+}
 .top-list{
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    justify-content: center;
+    gap: 20px;
+    
     
 }
 .top-list li{
@@ -137,8 +151,139 @@ aside{
     display: grid;
     grid-template-columns: 50px 1fr;
     gap: 15px;
+    list-style-type: none;
 }
 .side-icon{
     display: flex;
     justify-content: center;
+
 }
+
+a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    position: relative;
+    height: 25px;
+}
+a:hover{
+    font-size: 1.6rem;
+    color: rgb(12, 198, 249);
+    transition: 0.6;
+}
+
+
+.bot-list{
+   padding-top: 100px;
+
+}
+main{
+    grid-column: 2 /3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 40px;
+    border-left: #22303c 2px solid;
+}
+.projects{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    
+    
+}
+.project-cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 25px;  
+}
+.card{
+    background-color:#192734;
+    height: 200px;
+}
+.right-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 50px 1fr;
+    padding-left: 25px;
+}
+.announcements, .trending{ 
+    background-color:#192734;
+    
+}
+.captions{
+    display: flex;
+    align-items: center;
+    color: rgb(16, 194, 238);
+}
+.card{
+    display: grid;
+    grid-template-rows: 1fr 50px;
+    padding: 10px;
+    height: 250px;
+}
+.card-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-text p, .anoun-texts p{
+    color: #8899A6;  
+}
+.card-text h3, .anoun-texts h3{
+    color: #ffffff;
+}
+.card-icons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:10px;
+}
+.announcements{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 10px;
+}
+.anoun-texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+hr{
+    background-color: rgb(16, 194, 238) ;
+    height: 1px;
+    border: none;
+}
+.trending{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.user-trending{
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+.user-image{
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50px;
+}
+.user-info h4{
+    color: rgb(16, 194, 238) ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
